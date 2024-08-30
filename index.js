@@ -1,8 +1,11 @@
 const express = require('express');
 const app = express();
-app.get("/:id", (req, res) => {
-    const id = req.params.id
-    res.json({message: Number(id)+1})
+app.get("/ex1", (req, res) => {
+const num1 = req.query.num1
+const num2 =req.query.num2
+
+const resultado = Number(num1)+ Number(num2);
+res.json({message: resultado})
 } )
 
 app.listen(3000, () =>{
