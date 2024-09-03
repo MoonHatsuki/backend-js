@@ -23,6 +23,17 @@ app.get("/ex3", (req, res) => {
     let peso = req.query.peso
     let pesofinal = Number(pesofinal) + Number(peso);
 })
+//EXERCICIO 4
+app.get("/ex4", (req, res) => {
+    let gc = req.query.peso
+    let gf = Number((9*(gc)+160)/5);
+})
+//EXERCICIO 5
+app.get("/ex5", (req, res) => {
+    let milha = req.query.peso
+    let km = Number(milha)/1.60934;
+})
+
 //RESPOSTA E CONFIRMAÇÃO
 app.listen(3000, () =>{
     console.log('servidor está rodando na porta 3000')
