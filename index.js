@@ -1,21 +1,18 @@
 const express = require('express');
+const {somar, calculaSalario} = require('./service/exercicios')
 const app = express();
 app.use(express.json());
 //EXERCICIO 1
 app.post("/ex1", (req, res) => {
-    const num1 = req.body.num1
-    const num2 = req.body.num2
 
-    const resultado = Number(num1) + Number(num2);
+    const resultado = somar (req.body.num1, req.body.num2) ;
     res.json({ message: resultado })
 })
 
 //EXERCICIO 2
 app.post("/ex2", (req, res) => {
-    const val = req.body.val
-    const qtd = req.body.qtd
-
-    const resultado = Number(val) * Number(qtd);
+  
+    const resultado = calculaSalario;
     res.json({ message: resultado })
 })
 
